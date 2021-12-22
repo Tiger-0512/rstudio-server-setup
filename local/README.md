@@ -1,7 +1,8 @@
 ## Dependencies
 - Ubuntu 18.04 LTS (It may work in other OS, but I recommend using docker.)
 
-## 1. Install R >= 4.0
+## Installation
+### 1. Install R >= 4.0
 ```
 $ sudo su
 $ apt update -qq
@@ -12,14 +13,14 @@ $ apt install --no-install-recommends r-base
 $ exit
 ```
 
-## 2. Install RStudio
+### 2. Install RStudio
 ```
 $ sudo apt-get install gdebi-core
 $ wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2021.09.1-372-amd64.deb
 $ sudo gdebi rstudio-server-2021.09.1-372-amd64.deb
 ```
 
-## 3. Happy Hacking!
+### 3. Happy Hacking!
 Access http://[server-ip]:8787 and login with your the same account that you use in your linux server! <br>
 
 ## Notice
@@ -35,4 +36,10 @@ $ sudo rstudio-server restart
 ```
 $ sudo chmod -R 775 /usr/local/lib/R
 $ sudo chgrp -R [your group e.g., sudo; staff] /usr/local/lib/R
+```
+
+- If you want to use cran packages (like `cran-rstan`, `cran-tidyverse`), please add the below reopsitory and install packages.
+```
+$ sudo add-apt-repository ppa:c2d4u.team/c2d4u4.0+
+$ apt install --no-install-recommends r-cran-rstan
 ```
