@@ -29,3 +29,10 @@ $ sudo rstudio-server stop
 $ sudo rstudio-server start
 $ sudo rstudio-server restart
 ```
+
+## Troubleshooting
+- If you got error like `'lib = "/usr/local/lib/R/site-library"' is not writable` and cannot install packages, please change the permission of the R library package.
+```
+$ sudo chmod -R 775 /usr/local/lib/R
+$ sudo chgrp -R [your group e.g., sudo; staff] /usr/local/lib/R
+```
