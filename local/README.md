@@ -21,3 +21,11 @@ $ sudo gdebi rstudio-server-2021.09.1-372-amd64.deb
 
 ## 3. Happy Hacking!
 Access http://[server-ip]:8787 and login with your the same account that you use in your linux server! <br>
+
+## Notice
+- If you want to stop, start and restart RStudio Server manually, below commands help you.
+```
+$ sudo rstudio-server stop
+$ sudo rstudio-server start
+$ sudo rstudio-server restart
+```
