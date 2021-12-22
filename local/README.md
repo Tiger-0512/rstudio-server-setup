@@ -1,3 +1,6 @@
+## Dependencies
+- Ubuntu 18.04 LTS (It may work in other OS, but I recommend using docker.)
+
 ## 1. Install R >= 4.0
 ```
 $ sudo su
